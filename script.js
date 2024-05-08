@@ -1,8 +1,10 @@
-const myLibrary = [
-  "The Hobbit by J.R.R Tolkien 295 pages not read yet",
-  "A revolução dos bichos George Orwell",
-  "O pequeno príncipe Escritor",
-];
+// const myLibrary = [
+//   "The Hobbit by J.R.R Tolkien 295 pages not read yet",
+//   "A revolução dos bichos George Orwell",
+//   "O pequeno príncipe Escritor",
+// ];
+
+const myLibrary = [];
 
 function book() {
   // the constructor
@@ -18,9 +20,15 @@ function displayBooks() {
   const livros = document.getElementById("livro");
   // livros.innerHTML = myLibrary[0]
 
-  myLibrary.forEach(mostrar);
   function mostrar(value, index, array) {
-    livros.innerHTML += `<div id="livro">` + value + "</div>" + "<br>";
+    livros.innerHTML += `<div class="livreto">` + value + "</div>" + "<br>";
+    // esvazia a string agora
+  }
+
+  myLibrary.forEach(mostrar);
+
+  for (let i = 0; i < myLibrary.length; i++) {
+    myLibrary.pop();
   }
 }
 
