@@ -65,12 +65,14 @@ formContainer.addEventListener("click", (event) => {
   event.stopPropagation();
 });
 
-function Book(title, author, noPages, read) {
-  // the constructor
-  this.title = title;
-  this.author = author;
-  this.noPages = noPages;
-  this.read = read;
+class Book {
+  constructor(title, author, noPages, read) {
+    // the constructor
+    this.title = title;
+    this.author = author;
+    this.noPages = noPages;
+    this.read = read;
+  }
 }
 
 // faz um novo objeto livro e poe na lista
