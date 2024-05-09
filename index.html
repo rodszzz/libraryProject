@@ -1,28 +1,47 @@
 <!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <title>Library</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="style.css" />
-  <script src="script.js" defer></script>
-  <title>Library</title>
-</head>
+  <body>
+    <h1>hello world! oioi :)</h1>
 
-<body>
-  <h1>hello world! oioi :)</h1>
+    <div id="card-container">livros vão aqui em baixo: <br /></div>
 
-  <div id="livro">
-    livros vão aqui em baixo: <br />
+    <button id="btn-add">add livro</button>
 
-    <div class="livreto">
-      The Hobbit by J.R.R Tolkien 295 pages not read yet
-    </div>
-    <br />
-  </div>
+    <dialog id="form-dialog">
+      <div class="form-popup">
+        <form action="" method="dialog" class="form-container">
+          <label for="" class="form-header">Add new book</label>
 
-  <button id="botao-add">add livro</button>
-  <button id="botao-mostrar">mostra livros</button>
-</body>
+          <input type="text" id="title" name="title" placeholder="Title" />
 
+          <input type="text" id="author" name="author" placeholder="Author" />
+
+          <input
+            type="number"
+            id="pages"
+            name="pages"
+            placeholder="Number of Pages"
+          />
+
+          <label for="read">Already read this book?</label>
+          <select name="read" id="read">
+            <option value="yes" selected>Yes</option>
+            <option value="no">No</option>
+          </select>
+
+          <div>
+            <button type="submit" class="btn-submit">submit</button>
+          </div>
+        </form>
+      </div>
+    </dialog>
+  </body>
 </html>
