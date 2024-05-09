@@ -9,39 +9,50 @@
   </head>
 
   <body>
-    <h1>hello world! oioi :)</h1>
-
-    <div id="card-container">livros vão aqui em baixo: <br /></div>
-
-    <button id="btn-add">add livro</button>
-
-    <dialog id="form-dialog">
-      <div class="form-popup">
-        <form action="" method="dialog" class="form-container">
-          <label for="" class="form-header">Add new book</label>
-
-          <input type="text" id="title" name="title" placeholder="Title" />
-
-          <input type="text" id="author" name="author" placeholder="Author" />
-
-          <input
-            type="number"
-            id="pages"
-            name="pages"
-            placeholder="Number of Pages"
-          />
-
-          <label for="read">Already read this book?</label>
-          <select name="read" id="read">
-            <option value="yes" selected>Yes</option>
-            <option value="no">No</option>
-          </select>
-
-          <div>
-            <button type="submit" class="btn-submit">submit</button>
-          </div>
-        </form>
+    <div class="container">
+      <div class="library-header">
+        <h1>Biblioteca</h1>
       </div>
-    </dialog>
+
+      <div class="library-container">
+        <button class="btn-add">Add livro</button>
+
+        <div class="card-container"></div>
+      </div>
+
+      <dialog id="form-dialog">
+        <div class="form-popup">
+          <form action="" method="dialog" class="form-container">
+            <label for="" class="form-header">Adicione um novo livro</label>
+
+            <input type="text" id="title" name="title" placeholder="Título" />
+
+            <input
+              type="text"
+              id="author"
+              name="author"
+              placeholder="Autor(a)"
+            />
+
+            <input
+              type="number"
+              id="pages"
+              name="pages"
+              placeholder="Número de páginas"
+            />
+
+            <label for="read">Você já leu esse livro?</label>
+            <select name="read" id="read">
+              <option value="sim" selected>Sim</option>
+              <option value="nao">Não</option>
+            </select>
+
+            <div>
+              <button type="submit" class="btn-submit">Adicionar</button>
+            </div>
+          </form>
+        </div>
+      </dialog>
+    </div>
   </body>
 </html>

@@ -4,8 +4,8 @@
 //   "O pequeno príncipe Escritor",
 // ];
 
-const cardContainer = document.querySelector("#card-container");
-const addBook = document.querySelector("#btn-add");
+const cardContainer = document.querySelector(".card-container");
+const addBook = document.querySelector(".btn-add");
 const formDialog = document.querySelector("#form-dialog");
 const formContainer = document.querySelector(".form-container");
 const submitBtn = document.querySelector(".btn-submit");
@@ -81,10 +81,10 @@ function addBookToLibrary() {
   let noPages = formPages.value;
   let answer = formRead.value;
 
-  if (answer == "yes") {
-    read = "Read";
+  if (answer == "sim") {
+    read = "Lido";
   } else {
-    read = "Not yet read";
+    read = "Não lido";
   }
 
   newBook = new Book(title, author, noPages, read);
@@ -99,31 +99,31 @@ function makeCard() {
   const cardNoPages = document.createElement("p");
   const readBtn = document.createElement("button");
   const removeBtn = document.createElement("button");
-  removeBtn.innerHTML = "Remove";
+  removeBtn.innerHTML = "Remover";
 
   for (let book of myLibrary) {
     cardTitle.textContent = `${book.title}`;
-    cardAuthor.textContent = "Written by: " + book.author;
-    cardNoPages.textContent = "Pages: " + book.noPages;
+    cardAuthor.textContent = "Escrito por: " + book.author;
+    cardNoPages.textContent = "Páginas: " + book.noPages;
     readBtn.innerHTML = book.read;
 
-    if (book.read == "Read") {
+    if (book.read == "Lido") {
       readBtn.style.background = "#94ff93";
-    } else if (book.read == "Not yet read") {
+    } else if (book.read == "Não lido") {
       readBtn.style.background = "#fd9090";
     }
   }
 
   readBtn.addEventListener("click", () => {
     for (let book of myLibrary) {
-      if (book.read == "Read") {
+      if (book.read == "Lido") {
         readBtn.style.background = "#fd9090";
-        readBtn.innerHTML = "Not read yet";
-        book.read = "Not read yet";
-      } else if (book.read == "Not read yet") {
+        readBtn.innerHTML = "Não lido";
+        book.read = "Não lido";
+      } else if (book.read == "Não lido") {
         readBtn.style.background = "#94ff93";
-        readBtn.innerHTML = "Read";
-        book.read = "Read";
+        readBtn.innerHTML = "Lido";
+        book.read = "Lido";
       }
     }
   });
