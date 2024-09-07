@@ -1,9 +1,3 @@
-// const myLibrary = [
-//   "The Hobbit by J.R.R Tolkien 295 pages not read yet",
-//   "A revolução dos bichos George Orwell",
-//   "O pequeno príncipe Escritor",
-// ];
-
 const cardContainer = document.querySelector(".card-container");
 const addBook = document.querySelector(".btn-add");
 const formDialog = document.querySelector("#form-dialog");
@@ -19,36 +13,6 @@ const myLibrary = [];
 addBook.addEventListener("click", (button) => {
   formContainer.reset();
   formDialog.showModal();
-
-  // isso só muda o livro pro 2 da lista
-  // document.getElementById("livro").innerHTML = myLibrary[1]
-
-  // isso daqui pede um livro e joga na função de adicionar na biblio
-  //   let x = prompt("diz ai otro");
-  //   addBookToLibrary(x);
-  //
-  //   const livros = document.getElementById("livro");
-  //
-  //   function mostrar(value) {
-  //     livros.innerHTML +=
-  //       `<div id="livreto">` +
-  //       value +
-  //       ` <button id="btn-del">delete</button>` +
-  //       "</div>" +
-  //       "<br>";
-  //   }
-  //
-  //   myLibrary.forEach(mostrar);
-  //
-  //   // esvazia a string dos livros
-  //   for (let i = 0; i < myLibrary.length; i++) {
-  //     myLibrary.pop();
-  //   }
-  // });
-  //
-  // document.getElementById("btn-del").addEventListener("click", (button) => {
-  //   livroToDelete = document.getElementById("livreto");
-  //   livroToDelete.remove();
 });
 
 submitBtn.addEventListener("click", (event) => {
